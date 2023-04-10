@@ -1,0 +1,18 @@
+<html>
+
+<body>
+  <p id='p1'>Microtube</p>
+  <input type='text' id='id'>
+  <input type='button' id='view' value='View'>
+  <br />
+  <br />
+  <iframe id='player' type='text/html' width='640' height='360' frameborder='0' allowfullscreen></iframe>
+
+  <script>
+    btn = document.getElementById('view');
+    btn.addEventListener('click', (event) => {
+      id = document.getElementById('id');
+      document.getElementById('player').src = 'https://www.youtube.com/embed/' + id.value;
+    });
+  </script>
+</body>
